@@ -1,13 +1,21 @@
-import type { NextPage } from 'next'
-import Form from './components/Forms'
+import type { NextPage } from "next";
+import Form from "./components/Forms";
+
+import style from "../styles/Home.module.scss";
+
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <h1>teste</h1>
-      <Form/>
-    </div>
-  )
-}
+    <section className={style.container}>
+      <h1>GERADOR DE PROPOSTA</h1>
 
-export default Home
+      <div className={style.content}>
+        <Form />
+
+        <img src="docs.webp" alt="ilustração de documento" />
+      </div>
+    </section>
+  );
+};
+
+export default Home;

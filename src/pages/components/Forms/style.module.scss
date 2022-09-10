@@ -1,0 +1,42 @@
+.container {
+
+  input, select {
+    display: block;
+
+    height: 2.2rem;
+    width: 300px;
+
+    border-radius: .5rem;
+    border: none;
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.315);
+
+    margin-bottom: 1rem;
+    padding:0 1rem;
+
+    &:focus {
+    //   box-shadow: 0 0 0 0;
+      outline: 0;
+      
+    }
+  }
+
+  p{
+    font-weight: bolder;
+    color: var(--with-500);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.315); ;
+  }
+}
+.buttonPdf{
+
+  margin-top: 3rem;
+
+ background-color: var(--green-500);
+ color: var(--with-500);
+ font-weight: bolder;
+
+ transition: filter .2s;
+
+ &:hover{
+  filter:brightness(.94);
+ }
+}
