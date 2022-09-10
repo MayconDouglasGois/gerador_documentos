@@ -10,9 +10,11 @@ const Home: NextPage = () => {
       <h1>GERADOR DE PROPOSTA</h1>
 
       <div className={style.content}>
+        
+        <img src="docs.webp" alt="ilustração de documento" />
+
         <Form />
 
-        <img src="docs.webp" alt="ilustração de documento" />
       </div>
     </section>
   );

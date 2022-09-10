@@ -22,7 +22,7 @@ const Form = () => {
           solicitante,
           empresa,
           data,
-          solucao,
+          solucao
         }
       })
       .then(function (response) {

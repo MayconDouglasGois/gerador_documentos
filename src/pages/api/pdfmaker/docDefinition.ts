@@ -1,10 +1,12 @@
-interface Icliente {
-  cliente: string
-}
+interface Icadastro {
+  solicitante: string,
+  empresa: string,
+  data: string,
+  solucao: string}
 
 
 
-function CreatDocDefinition(cliente: Icliente) {
+function CreatDocDefinition({solicitante, empresa, data, solucao}:Icadastro) {
 
     const docDefinition = {
       content: [
@@ -17,8 +19,8 @@ function CreatDocDefinition(cliente: Icliente) {
             widths: [ '*', 'auto', 100, '*' ],
     
             body: [
-              [ cliente, 'Second', 'Third', 'The last one' ],
-              [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+              [ 'cliente', 'Second', 'Third', 'The last one' ],
+              [ solicitante, empresa, data, solucao ],
               [ { text: 'Bold value', bold: true }, 'Val 2', 'Val 3', 'Val 4' ]
             ]
           }
