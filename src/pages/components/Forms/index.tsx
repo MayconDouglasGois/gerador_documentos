@@ -1,6 +1,5 @@
 import React from "react";
-import { axios } from "../../../service/axios";
-import { pdfMake } from "../../../service/pdfmaker";
+
 import swal from 'sweetalert';
 
 import Head from "next/head";
@@ -13,6 +12,7 @@ import {
   BsCalendar2MinusFill,
   BsFillPhoneVibrateFill,
 } from "react-icons/bs";
+import { gerarPDF } from "../../../service/pdfmaker/pdfmaker";
 
 const Form = () => {
   const [solicitante, setSolicitante] = React.useState("");
@@ -29,27 +29,8 @@ const Form = () => {
       return;
     }
 
-     swal("Parabens!", "Proposta gerada com sucesso!", "success");
-
-    await axios
-      .post("/api/createpdf", {
-        data: {
-          solicitante,
-          empresa,
-          data,
-          solucao,
-        },
-      })
-      .then(function (response) {
-        pdfMake
-          .createPdf(response.data.docDefinition)
-          .download(`Proposta_${empresa}_${solucao}_${data}`);
-      })
-
-      .catch(function (error) {
-        console.error(error);
-      });
-
+    gerarPDF({solicitante,empresa,data,solucao})
+    
 
   }
 
@@ -107,7 +88,6 @@ const Form = () => {
             }
           />
         </label>
-
         <label>
           <p>
             <BsFillPhoneVibrateFill /> Solução
