@@ -1,8 +1,10 @@
 import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
+
 import { rastreamentoBloqueio } from "./docsDefinition/rastreamentoBloqueio";
 
-(<any>pdfMake).vfs = pdfFonts.pdfMake.vfs;
+
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 interface IpdfOpcions {
   solicitante: string;
@@ -29,7 +31,7 @@ function gerarPDF({ solicitante, empresa, data, solucao }: IpdfOpcions) {
   
 
   pdfMake
-    .createPdf(docDefinition) //@ts-ignore
+    .createPdf(docDefinition as any)
     .download(`Proposta_Comercial_${empresa}_${data}`);
     
 }
