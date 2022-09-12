@@ -18,7 +18,7 @@ const Form = () => {
   const [solicitante, setSolicitante] = React.useState("");
   const [empresa, setEmpresa] = React.useState("");
   const [data, setData] = React.useState("");
-  const [solucao, sersolucao] = React.useState("");
+  const [solucao, sersolucao] = React.useState("rastreamento simples");
 
   async function coletarDados(e: React.SyntheticEvent) {
     e.preventDefault();
@@ -98,9 +98,9 @@ const Form = () => {
               sersolucao(e.target.value);
             }}
           >
-            <option disabled selected>
+            {/* <option disabled selected value="DEFAULT">
               Solução
-            </option>
+            </option> */}
             <option value="rastreamento simples">Rastreamento Simples</option>
             <option value="rastreamento+bloqueio">
               Rastreamento + Boqueio
