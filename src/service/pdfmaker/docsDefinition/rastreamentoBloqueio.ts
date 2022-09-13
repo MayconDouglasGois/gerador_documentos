@@ -169,13 +169,13 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
         ],
         style: "paragraph",
       },
-      // {
-      //   image: `data:image/png;base64,${rastreamento}`,
-      //   width: 480,
-      //   alignment: "center",
-      //   margin: [0, 20, 0, 0],
-      //   pageBreak: "after",
-      // },
+      {
+        image: `data:image/png;base64,${rastreamento}`,
+        width: 480,
+        alignment: "center",
+        margin: [0, 20, 0, 0],
+        pageBreak: "after",
+      },
       { text: "Funcionalidades do Equipamento x Sistema?", style: "title" },
       {
         ul: [
