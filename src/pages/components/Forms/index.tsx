@@ -31,9 +31,7 @@ const Form = () => {
    
     gerarPDF({solicitante,empresa,data,solucao})
 
-    swal("Bom Trabalho","PDF gerado com sucesso!", "success",{
-      timer: 2000
-    });
+    swal("Bom Trabalho","PDF gerado com sucesso!", "success");
     
   
     

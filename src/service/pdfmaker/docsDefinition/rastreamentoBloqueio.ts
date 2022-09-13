@@ -1,5 +1,5 @@
 import logo from "../imageBase64/logo";
-import fluxogramaRastreamento from "../imageBase64/fluxogramaRastreamento";
+import rastreamento from "../imageBase64/rastreamento";
 
 interface IpdfOpcions {
   solicitante: string;
@@ -170,7 +170,7 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
         style: "paragraph",
       },
       {
-        image: `data:image/png;base64,${fluxogramaRastreamento}`,
+        image: `data:image/png;base64,${rastreamento}`,
         width: 480,
         alignment: "center",
         margin: [0, 20, 0, 0],
