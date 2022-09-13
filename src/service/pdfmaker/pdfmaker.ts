@@ -15,7 +15,7 @@ interface IpdfOpcions {
 
 
 
-function gerarPDF({ solicitante, empresa, data, solucao }: IpdfOpcions) {
+async function gerarPDF({ solicitante, empresa, data, solucao }: IpdfOpcions) {
 
   const docDefinition = rastreamentoBloqueio({solicitante, empresa, data, solucao})
 
@@ -30,7 +30,7 @@ function gerarPDF({ solicitante, empresa, data, solucao }: IpdfOpcions) {
  
   
 
-  pdfMake
+ pdfMake
     .createPdf(docDefinition as any)
     .download(`Proposta_Comercial_${empresa}_${data}`);
     

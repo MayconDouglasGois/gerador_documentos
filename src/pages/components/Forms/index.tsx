@@ -28,7 +28,7 @@ const Form = () => {
       swal("Erro!","Preencha todos os campos!", "error");
       return;
     }
-   
+    
     gerarPDF({solicitante,empresa,data,solucao})
 
     swal("Bom Trabalho","PDF gerado com sucesso!", "success");
