@@ -27,9 +27,10 @@ const Form = () => {
 
       return;
     }
+
     swal("Aguarde!","Documento está sendo gerado", "info");
 
-    gerarPDF({solicitante,empresa,data,solucao})
+   await gerarPDF({solicitante,empresa,data,solucao})
 
     swal("Bom Trabalho","PDF gerado com sucesso!", "success");
     
