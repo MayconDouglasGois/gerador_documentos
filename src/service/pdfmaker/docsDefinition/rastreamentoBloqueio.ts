@@ -167,15 +167,15 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
             text: "A rede de dados que nossos rastreadores trafegam é a rede 2G, o que significa que qualquer local que tenha cobertura de dados 2G da operadora que o rastreador está configurado, o sistema irá funcionar em tempo real. Nos locais que não tiverem cobertura, o rastreador funciona normalmente a coleta das informações através da placa GPS, entretanto não irá conseguir enviar os dados em tempo real, porém, ao restabelecer conexão, todos os dados que estavam armazenados na memória do rastreador no período que ficou offline, serão enviados para nossa central e o usuário consegue visualizar a movimentação daquele período.",
           },
         ],
-        style: "paragraph",
+        style: "paragraph",pageBreak: "after",
       },
-      {
-        image: `data:image/png;base64,${rastreamento}`,
-        width: 480,
-        alignment: "center",
-        margin: [0, 20, 0, 0],
-        pageBreak: "after",
-      },
+      // {
+      //   image: `data:image/png;base64,${rastreamento}`,
+      //   width: 480,
+      //   alignment: "center",
+      //   margin: [0, 20, 0, 0],
+        
+      // },
       { text: "Funcionalidades do Equipamento x Sistema?", style: "title" },
       {
         ul: [
