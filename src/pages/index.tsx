@@ -1,13 +1,23 @@
 import type { NextPage } from "next";
 import Form from "./components/Forms";
+import {AiFillFileText} from 'react-icons/ai'
+
+import Head from "next/head";
 
 import style from "../styles/Home.module.scss";
 
 
 const Home: NextPage = () => {
   return (
+    <>
+    <Head>
+        <title>Gerador | Docs</title>
+      </Head>
+
     <section className={style.container}>
-      <h1>GERADOR DE PROPOSTA</h1>
+      <h1>
+        <strong><AiFillFileText/></strong>GERA<strong>DOCS</strong>
+        </h1>
 
       <div className={style.content}>
         
@@ -17,6 +27,7 @@ const Home: NextPage = () => {
 
       </div>
     </section>
+    </>
   );
 };
 

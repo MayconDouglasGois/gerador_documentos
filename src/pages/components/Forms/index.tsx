@@ -2,8 +2,6 @@ import React from "react";
 
 import swal from 'sweetalert';
 
-import Head from "next/head";
-
 import style from "./style.module.scss";
 
 import {
@@ -42,10 +40,6 @@ const Form = () => {
 
   return (
     <>
-      <Head>
-        <title>Gerador | Proposta</title>
-      </Head>
-
       <form
         onSubmit={(e: React.SyntheticEvent) => coletarDados(e)}
         className={style.container}
