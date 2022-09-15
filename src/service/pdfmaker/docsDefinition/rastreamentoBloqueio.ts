@@ -1,5 +1,6 @@
 import logo from "../imageBase64/logo";
-import rastreamento from "../imageBase64/rastreamento";
+// import rastreamento from "../imageBase64/rastreamento";
+import logocopy from "../imageBase64/logo copy"
 
 interface IpdfOpcions {
   solicitante: string;
@@ -16,10 +17,10 @@ function rastreamentoBloqueio({
 }: IpdfOpcions) {
 
 const date = new Date(data)
-const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+const months = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
 const currentYear = date.getFullYear();
-const month = months[date.getMonth() + 1]
-const day = date.getDay();
+const month = months[date.getMonth()]
+const day = date.getDate() + 1;
 
 const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
 
@@ -169,13 +170,13 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
         ],
         style: "paragraph",pageBreak: "after",
       },
-      // {
-      //   image: `data:image/png;base64,${rastreamento}`,
-      //   width: 480,
-      //   alignment: "center",
-      //   margin: [0, 20, 0, 0],
+      {
+        image: `data:image/png;base64,${logocopy}`,
+        width: 480,
+        alignment: "center",
+        margin: [0, 20, 0, 0],
         
-      // },
+      },
       { text: "Funcionalidades do Equipamento x Sistema?", style: "title" },
       {
         ul: [
