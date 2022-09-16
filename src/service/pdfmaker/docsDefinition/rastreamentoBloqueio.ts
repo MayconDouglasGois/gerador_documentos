@@ -1,5 +1,7 @@
 import logo from "../imageBase64/logo";
 import rastreamento from '../imageBase64/rastreamento'
+import assinatura from '../imageBase64/assinatura'
+import rubrica from './../imageBase64/rubrica';
 
 interface IpdfOpcions {
   solicitante: string;
@@ -172,6 +174,8 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
           image:`data:image/jpeg;base64,${rastreamento}` ,
           width: 450,
           height: 150,
+          margin: [0, 30, 0, 0],
+          alignment: 'center',
           pageBreak: "after"
       },
       { text: "Funcionalidades do Equipamento x Sistema?", style: "title" },
@@ -325,9 +329,14 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
       { text: `Mossoró/RN, ${dataDoc}`, style: "paragraph",alignment: "right", margin: [0, 40, 0, 20],  },
       {
         columns: [
-          [
+          [{
+            image:`data:image/jpeg;base64,${assinatura}` ,
+        },
             { text: "_______________________________________________", style: "paragraph" , bold: true },
             { text: "Consultor Responsável", style: "paragraph" },
+            {
+              image:`data:image/jpeg;base64,${rubrica}` ,
+          }
           ],
           [
             { text: "_______________________________________________", style: "paragraph" , bold: true },
