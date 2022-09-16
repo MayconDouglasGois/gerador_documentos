@@ -1,7 +1,7 @@
 import logo from "../imageBase64/logo";
 import rastreamento from '../imageBase64/rastreamento'
-import assinatura from '../imageBase64/assinatura'
-import rubrica from './../imageBase64/rubrica';
+import retornarassinatura from '../imageBase64/assinatura'
+import retornarrubrica from './../imageBase64/rubrica';
 
 interface IpdfOpcions {
   solicitante: string;
@@ -19,6 +19,9 @@ function rastreamentoBloqueio({
 
 
   return new Promise((resolve, reject) => {
+
+const rubrica = retornarrubrica()
+const assinatura = retornarassinatura()
 
 const date = new Date(data)
 const months = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
