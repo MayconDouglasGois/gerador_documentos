@@ -30,7 +30,7 @@ async function gerarPDF({ solicitante, empresa, data, solucao }: IpdfOpcions) {
  
   
 
- await pdfMake
+    pdfMake
     .createPdf(docDefinition as any)
     .download(`Proposta_Comercial_${empresa}_${data}`);
     
