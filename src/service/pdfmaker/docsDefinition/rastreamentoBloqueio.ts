@@ -1,7 +1,7 @@
 import logo from "../imageBase64/logo";
 import rastreamento from '../imageBase64/rastreamento'
 import assinatura from '../imageBase64/assinatura'
-import rubrica from './../imageBase64/rubrica';
+// import rubrica from './../imageBase64/rubrica';
 
 interface IpdfOpcions {
   solicitante: string;
@@ -334,9 +334,9 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
         },
             { text: "_______________________________________________", style: "paragraph" , bold: true },
             { text: "Consultor Responsável", style: "paragraph" },
-            {
-              image:`data:image/jpeg;base64,${rubrica}` ,
-          }
+          //   {
+          //     image:`data:image/jpeg;base64,${rubrica}` ,
+          // }
           ],
           [
             { text: "_______________________________________________", style: "paragraph" , bold: true },
