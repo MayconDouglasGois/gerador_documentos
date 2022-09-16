@@ -179,30 +179,37 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
           {
             image: `data:image/png;base64,${colun1l1}`,
             width: 80,
+            height: 80,
           },
           {
             image: `data:image/png;base64,${colun1l2}`,
             width: 100,
+            height: 80,
           },
          ],
          [
           {
             image: `data:image/png;base64,${colun2l1}`,
-            width: 70,margin: [40, 0, 0, 0]
+            width: 70,
+            height: 80,
+            margin: [40, 0, 0, 0]
           },
           {
             image: `data:image/png;base64,${colun2l2}`,
             width: 150,
+            height: 80,
           },
          ],
          [
           {
             image: `data:image/png;base64,${colun3l1}`,
             width: 170,
+            height: 80,
           },
           {
             image: `data:image/png;base64,${colun3l2}`,
             width: 160,
+            height: 80,
           },
          ],
         ],pageBreak: "after"
@@ -351,7 +358,7 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
       
       { text: "Informações técnicas e financeiras eventualmente obtidas durante a realização das atividades envolvidas nesta proposta comercial, como especificações, valores, funcionamento, organização ou desempenho da empresa / cliente serão tidas como confidenciais e sigilosas sempre que tal condição for solicitada.", style: "paragraph" },
       
-      { text: "Prazo de atendimento", style: "styles" },
+      { text: "Prazo de atendimento", style: "title" },
       { text: "Após aprovação da proposta e envio dos dados cadastrais, o prazo mínimo para início da instalação é de até 15 dias", style: "paragraph" },
       
       
