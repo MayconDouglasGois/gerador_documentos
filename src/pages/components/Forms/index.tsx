@@ -18,7 +18,7 @@ const Form = () => {
   const [data, setData] = React.useState("");
   const [solucao, sersolucao] = React.useState("rastreamento simples");
 
-  async function coletarDados(e: React.SyntheticEvent) {
+  function coletarDados(e: React.SyntheticEvent) {
     e.preventDefault();
 
     if (!solicitante || !empresa || !data || !solucao) {
@@ -30,12 +30,9 @@ const Form = () => {
 
     swal("Aguarde!","Documento está sendo gerado", "info");
 
-   await gerarPDF({solicitante,empresa,data,solucao})
+   gerarPDF({solicitante,empresa,data,solucao})
 
     swal("Bom Trabalho","PDF gerado com sucesso!", "success");
-    
-  
-    
 
   }
 
