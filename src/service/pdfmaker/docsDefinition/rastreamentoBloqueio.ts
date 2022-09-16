@@ -1,10 +1,5 @@
 import logo from "../imageBase64/logo";
-import colun1l1 from './../imageBase64/colun1l1';
-import colun1l2 from './../imageBase64/colun1l2';
-import colun2l1 from "../imageBase64/colun2l1";
-import colun2l2 from "../imageBase64/colun2l2";
-import colun3l1 from "../imageBase64/colun3l1";
-import colun3l2 from "../imageBase64/colun3l2";
+import rastreamento from '../imageBase64/rastreamento'
 
 interface IpdfOpcions {
   solicitante: string;
@@ -174,45 +169,10 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
         ],
         style: "paragraph",
       },{
-        columns: [
-         [
-          {
-            image: `data:image/png;base64,${colun1l1}`,
-            width: 80,
-            height: 80,
-          },
-          {
-            image: `data:image/png;base64,${colun1l2}`,
-            width: 100,
-            height: 80,
-          },
-         ],
-         [
-          {
-            image: `data:image/png;base64,${colun2l1}`,
-            width: 70,
-            height: 80,
-            margin: [40, 0, 0, 0]
-          },
-          {
-            image: `data:image/png;base64,${colun2l2}`,
-            width: 150,
-            height: 80,
-          },
-         ],
-         [
-          {
-            image: `data:image/png;base64,${colun3l1}`,
-            width: 170,
-            height: 80,
-          },
-          {
-            image: `data:image/png;base64,${colun3l2}`,
-            width: 160,
-            height: 80,
-          },
-         ],
-        ],pageBreak: "after"
+          image:`data:image/jpeg;base64,${rastreamento}` ,
+          width: 450,
+          height: 150,
+          pageBreak: "after"
       },
       { text: "Funcionalidades do Equipamento x Sistema?", style: "title" },
       {
