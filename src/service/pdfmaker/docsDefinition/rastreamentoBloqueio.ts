@@ -335,7 +335,8 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
       { text: `Mossoró/RN, ${dataDoc}`, style: "paragraph",alignment: "right", margin: [0, 40, 0, 20],  },
       {
         columns: [
-          [{
+          [
+            {
             image:`data:image/jpeg;base64,${assinatura}` ,
         },
             { text: "_______________________________________________", style: "paragraph" , bold: true },
