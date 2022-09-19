@@ -341,9 +341,9 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
         },
             { text: "_______________________________________________", style: "paragraph" , bold: true },
             { text: "Consultor Responsável", style: "paragraph" },
-            {
-              image:`data:image/jpeg;base64,${rubrica}`,width: 150,
-          }
+          //   {
+          //     image:`data:image/jpeg;base64,${rubrica}`,width: 100,
+          // }
           ],
           [
             { text: "_______________________________________________", style: "paragraph" , bold: true },
