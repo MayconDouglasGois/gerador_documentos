@@ -32,11 +32,18 @@ function rastreamentoBloqueio({
 }: IpdfOpcions) {
 
 
+
+  
+
 const date = new Date(data)
 const months = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
 const currentYear = date.getFullYear();
 const month = months[date.getMonth()]
 const day = date.getDate() + 1;
+
+
+
+
 
 const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
 
