@@ -374,6 +374,7 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
       },
     },
   };
+  return docDefinition
 }
 
 export { rastreamentoBloqueio };

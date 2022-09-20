@@ -15,9 +15,9 @@ interface IpdfOpcions {
 
 
 
-async function gerarPDF({ solicitante, empresa, data, solucao }: IpdfOpcions) {
+function gerarPDF({ solicitante, empresa, data, solucao }: IpdfOpcions) {
 
-  const docDefinition = await rastreamentoBloqueio({solicitante, empresa, data, solucao})
+  const docDefinition = rastreamentoBloqueio({solicitante, empresa, data, solucao})
 
   pdfMake.fonts = {
     Roboto: {
@@ -30,9 +30,7 @@ async function gerarPDF({ solicitante, empresa, data, solucao }: IpdfOpcions) {
  
   
 
-    pdfMake
-    .createPdf(docDefinition as any)
-    .download(`Proposta_Comercial_${empresa}_${data}`);
+    pdfMake.createPdf(docDefinition as any).download(`Proposta_Comercial_${empresa}_${data}`);
     
 }
 
