@@ -352,7 +352,7 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
         //   ],
         // ]
          
-            image:`data:image/jpeg;base64,${base}`,width: 520,
+            image:`data:image/jpeg;base64,${base}`,width: 500,
         
       }
     ],
