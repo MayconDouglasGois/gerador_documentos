@@ -1,8 +1,6 @@
 import logo from "../imageBase64/logo";
 import rastreamento from '../imageBase64/rastreamento'
-import retornarassinatura from '../imageBase64/assinatura'
-import retornarrubrica from './../imageBase64/rubrica';
-import {base} from '../imageBase64/base'
+import base from '../imageBase64/base'
 
 interface IpdfOpcions {
   solicitante: string;
@@ -21,8 +19,6 @@ function rastreamentoBloqueio({
 
   return new Promise((resolve, reject) => {
 
-const rubrica = retornarrubrica()
-const assinatura = retornarassinatura()
 
 const date = new Date(data)
 const months = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
@@ -335,23 +331,7 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
       
       { text: `Mossoró/RN, ${dataDoc}`, style: "paragraph",alignment: "right", margin: [0, 40, 0, 20],  },
       {
-        // columns: [
-        //   [
-        //     {
-        //     image:`data:image/jpeg;base64,${assinatura}`,width: 150,
-        // },
-        //     { text: "_______________________________________________", style: "paragraph" , bold: true },
-        //     { text: "Consultor Responsável", style: "paragraph" },
-        //   //   {
-        //   //     image:`data:image/jpeg;base64,${rubrica}`,width: 100,
-        //   // }
-        //   ],
-        //   [
-        //     { text: "_______________________________________________", style: "paragraph" , bold: true },
-        //     { text: "Cliente", style: "paragraph" },
-        //   ],
-        // ]
-         
+ 
             image:`data:image/jpeg;base64,${base}`,width: 500,
         
       }
