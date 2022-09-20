@@ -7,7 +7,22 @@ interface IpdfOpcions {
   empresa: string;
   data: string;
   solucao: string;
+  valores?: {
+    ativacao: number,
+    mensalidade: number,
+    manutencao: number,
+    desinstalacao: number,
+    extravio: number,
+  }
 }
+
+
+// Taxa de Ativação: R$ 150,00 
+// Mensalidade: R$ 59,90
+// Manutenção por motivo de violação: R$ 100,00 
+// Desinstalação: R$ 75,00 
+// Taxa de Extravio: R$ 600,00
+
 
 function rastreamentoBloqueio({
   solicitante,
@@ -15,9 +30,6 @@ function rastreamentoBloqueio({
   data,
   solucao,
 }: IpdfOpcions) {
-
-
-  return new Promise((resolve, reject) => {
 
 
 const date = new Date(data)
@@ -50,6 +62,7 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
       {
         table: {
           widths: ["*", "*"],
+          heights: 10,
           body: [
             [
               { text: "(84) 2142-0712  |  (84) 99848-0638", style: "table" },
@@ -60,7 +73,7 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
               { text: "www.atstec.com.br", style: "table" },
             ],
           ],
-        },
+        },	layout: 'noBorders'
       },
       {
         columns: [
@@ -361,8 +374,6 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
       },
     },
   };
-  resolve(docDefinition);
-})
 }
 
 export { rastreamentoBloqueio };
