@@ -174,8 +174,7 @@ const Form = () => {
 
 
         <button onClick={openModal} className={style.buttonModal}>
-            Editar Valores
-            <GiMoneyStack />
+            Editar Valores <GiMoneyStack />
           </button>
 
 
