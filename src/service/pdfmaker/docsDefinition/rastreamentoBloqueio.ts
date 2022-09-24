@@ -7,21 +7,14 @@ interface IpdfOpcions {
   empresa: string;
   data: string;
   solucao: string;
-  valores?: {
+  valores: {
     ativacao: number,
     mensalidade: number,
     manutencao: number,
-    desinstalacao: number,
+    reinstalacao: number,
     extravio: number,
   }
 }
-
-
-// Taxa de Ativação: R$ 150,00 
-// Mensalidade: R$ 59,90
-// Manutenção por motivo de violação: R$ 100,00 
-// Desinstalação: R$ 75,00 
-// Taxa de Extravio: R$ 600,00
 
 
 function rastreamentoBloqueio({
@@ -29,11 +22,11 @@ function rastreamentoBloqueio({
   empresa,
   data,
   solucao,
+  valores
 }: IpdfOpcions) {
 
 
 
-  
 
 const date = new Date(data)
 const months = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
@@ -289,12 +282,12 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
         ul: [
           {
             text: [{ text: "Taxa de Ativação: ", bold: true }, 
-            { text: "R$ 150,00 – Serviço de instalação dos equipamentos e implementação do sistema;" }],
+            { text: "R$ "+valores.ativacao.toFixed(2)+" – Serviço de instalação dos equipamentos e implementação do sistema;" }],
             style: "list",
           },
           {
             text: [{ text: "Mensalidade: ", bold: true }, 
-            { text: "R$ 59,90 – Serviço referente ao suporte, assistência, manutenção e acesso aos sistemas de monitoramento;" }],
+            { text: "R$ "+valores.mensalidade.toFixed(2)+" – Serviço referente ao suporte, assistência, manutenção e acesso aos sistemas de monitoramento;" }],
             style: "list",
           },
           {
@@ -304,7 +297,7 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
           },
            {
             text: [{ text: "Manutenção por motivo de violação: ", bold: true }, 
-            { text: "R$ 100,00 – Serviço de atualização/troca/revisão do equipamento e seus acessórios por motivos de intervenção de terceiros;" }],
+            { text: "R$ "+valores.manutencao.toFixed(2)+" – Serviço de atualização/troca/revisão do equipamento e seus acessórios por motivos de intervenção de terceiros;" }],
             style: "list",
           },
           {
@@ -313,13 +306,13 @@ const dataDoc = String(` ${day} de ${month} de ${currentYear}`)
             style: "list",
           },
           {
-            text: [{ text: "Desinstalação: ", bold: true }, 
-            { text: "R$ 75,00 – Instalação de um equipamento que foi desinstalado dentro de um período máximo de 30 dias;" }],
+            text: [{ text: "Reinstalação: ", bold: true }, 
+            { text: "R$ "+valores.reinstalacao.toFixed(2)+" – Instalação de um equipamento que foi desinstalado dentro de um período máximo de 30 dias;" }],
             style: "list",
           },
           {
             text: [{ text: "Taxa de Extravio: ", bold: true }, 
-            { text: "R$ 600,00 – Valor por equipamento Extraviado." }],
+            { text: "R$ "+valores.extravio.toFixed(2)+" – Valor por equipamento Extraviado." }],
             style: "list",pageBreak: "after",
           },
         ]

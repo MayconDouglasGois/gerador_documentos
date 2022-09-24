@@ -11,13 +11,20 @@ interface IpdfOpcions {
   empresa: string;
   data: string;
   solucao: string;
+  valores: {
+    ativacao: number,
+    mensalidade: number,
+    manutencao: number,
+    reinstalacao: number,
+    extravio: number,
+  }
 }
 
 
 
-function gerarPDF({ solicitante, empresa, data, solucao }: IpdfOpcions) {
+function gerarPDF({ solicitante, empresa, data, solucao,valores }: IpdfOpcions) {
 
-  const docDefinition = rastreamentoBloqueio({solicitante, empresa, data, solucao})
+  const docDefinition = rastreamentoBloqueio({solicitante, empresa, data, solucao,valores})
 
   pdfMake.fonts = {
     Roboto: {

@@ -51,6 +51,24 @@ color: var(--fontColor);
 body, input, textarea, select, button {
     font: 400 1rem var(--font);
 }
+input, select {
+    display: block;
+
+    height: 2.2rem;
+    width: 300px;
+
+    border-radius: .5rem;
+    border: none;
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.315);
+    margin-top: 2px;
+    margin-bottom: 1rem;
+    padding:0 1rem;
+
+    &:focus {
+      outline: 0;
+      
+    }
+  }
 
 button{
     cursor: pointer;
@@ -60,3 +78,8 @@ a{
     color:var(--fontColor);
     text-decoration: none;
 }
+ p{
+    font-weight: bolder;
+    color: var(--with-500);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.315); ;
+  }
