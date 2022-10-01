@@ -30,12 +30,19 @@ flex-direction: column;
 
   button{
     background-color: var(--background);
-    color: brown;
+    color: rgb(255, 255, 255);
     align-self: flex-end;
     
     border: none;
     
     font-size: 2rem;
+
+    transition: color .2s;
+
+    
+    &:hover{
+      color: rgb(255, 0, 0);
+    }
   }
 }
 .buttonModal{
