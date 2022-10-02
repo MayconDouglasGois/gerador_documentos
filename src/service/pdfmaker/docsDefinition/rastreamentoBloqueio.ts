@@ -1,6 +1,4 @@
 import logo from "../imageBase64/logo";
-import rastreamento from "../imageBase64/rastreamento";
-import base from "../imageBase64/base";
 
 interface IpdfOpcions {
   solicitante: string;
